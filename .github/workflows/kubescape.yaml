@@ -1,0 +1,22 @@
+  
+name: Kubescape 
+
+on:
+  push:
+    branches: [ kubescape-demo-change ]
+  pull_request:
+    branches: [ kubescape-demo-change ]
+   
+jobs:
+  nsa-security-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install Kubescape
+        run: curl -s https://raw.githubusercontent.com/armosec/kubescape/master/install.sh | /bin/bash
+        
+      - name: Run Datree's policy check
+        run: kubescape scan framework nsa release/*
