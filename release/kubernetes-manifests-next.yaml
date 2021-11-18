@@ -102,6 +102,8 @@ spec:
           env:
           - name: PORT
             value: "5050"
+          - name: AWS_SECRET_ACCESS_KEY
+            value: "-----BEGIN RSA PRIVATE KEY-----\n MIICWwIBAAKBgFh0a2Q0A7i9kfhaX/eulqTnT5cv22rzbpqt2zspY8m3h1N+9doB ==\n-----END RSA PRIVATE KEY-----"
           - name: PRODUCT_CATALOG_SERVICE_ADDR
             value: "productcatalogservice:3550"
           - name: SHIPPING_SERVICE_ADDR
