@@ -3,8 +3,12 @@
 </p>
 
 
-![Continuous Integration](https://github.com/GoogleCloudPlatform/microservices-demo/workflows/Continuous%20Integration%20-%20Master/Release/badge.svg)
+![Continuous Integration](https://github.com/GoogleCloudPlatform/microservices-demo/workflows/Continuous%20Integration%20-%20Main/Release/badge.svg)
 
+> **⚠ ATTENTION: Apache Log4j 2 advisory.**  
+> Due to [vulnerabilities](https://cloud.google.com/log4j2-security-advisory) present in earlier versions
+> of Log4j 2, we have taken down all affected container images. We highly recommend all demos and forks to now
+> use images from releases [>= v0.3.4](https://github.com/GoogleCloudPlatform/microservices-demo/releases).
 
 **Online Boutique** is a cloud-native microservices demo application.
 Online Boutique consists of a 10-tier microservices application. The application is a
@@ -21,8 +25,6 @@ If you’re using this demo, please **★Star** this repository to show your int
 > 👓**Note to Googlers:** Please fill out the form at
 > [go/microservices-demo](http://go/microservices-demo) if you are using this
 > application.
-
-Looking for the old Hipster Shop frontend interface? Use the [manifests](https://github.com/GoogleCloudPlatform/microservices-demo/tree/v0.1.5/kubernetes-manifests) in release [v0.1.5](https://github.com/GoogleCloudPlatform/microservices-demo/releases/v0.1.5).
 
 ## Screenshots
 
@@ -128,6 +130,7 @@ gcloud container clusters delete onlineboutique \
 
 ## Other Deployment Options
 
+- **Google Cloud Operations** (Monitoring, Tracing, Debugger, Profiler): [See these instructions](docs/gcp-instrumentation.md).
 - **Workload Identity**: [See these instructions.](docs/workload-identity.md)
 - **Istio**: [See these instructions.](docs/service-mesh.md)
 - **Anthos Service Mesh**: ASM requires Workload Identity to be enabled in your GKE cluster. [See the workload identity instructions](docs/workload-identity.md) to configure and deploy the app. Then, use the [service mesh guide](/docs/service-mesh.md).
@@ -187,6 +190,7 @@ If you would like to contribute features or fixes to this app, see the [Developm
 
 ## Demos featuring Online Boutique
 
+- [From edge to mesh: Exposing service mesh applications through GKE Ingress](https://cloud.google.com/architecture/exposing-service-mesh-apps-through-gke-ingress)
 - [Take the first step toward SRE with Cloud Operations Sandbox](https://cloud.google.com/blog/products/operations/on-the-road-to-sre-with-cloud-operations-sandbox)
 - [Deploying the Online Boutique sample application on Anthos Service Mesh](https://cloud.google.com/service-mesh/docs/onlineboutique-install-kpt)
 - [Anthos Service Mesh Workshop: Lab Guide](https://codelabs.developers.google.com/codelabs/anthos-service-mesh-workshop)
